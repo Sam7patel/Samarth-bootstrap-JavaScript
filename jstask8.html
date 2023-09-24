@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+    <style>
+        .alignment{
+            padding-inline-start: 50%;
+        }
+        .heading{
+            text-align: center;
+            color: blue;
+        }
+        
+        .btn{
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+        }
+        .check{
+            margin-inline-start: 26.7%;
+        }
+        #msg1{
+            color: red;
+        }
+        #msg2{
+            color: red;
+        }
+        #msg3{
+            color: red;
+        }
+        #msg4{
+            color: red;
+        }
+        #msg5{
+            color: red;
+        }
+        #msg6{
+            color: red;
+        }
+        #msg7{
+            color: red;
+        }
+        #msg8{
+            color: red;
+        }
+        #msg9{
+            color: red;
+        }
+        .gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #c6de0c);
+  background-size: 200% 200%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    </style>
+</head>
+<body class="gradient-background">
+    <h2 class="heading">Registration form</h2>
+    
+    
+    <div class="container">
+        <center>
+            <form>
+
+                <table cellspacing="12">
+                    <tr>
+                        <td><label for="first_name">First Name</label></td>
+                        <td><input type="text" name="first_name" onkeyup="strengthChecker1()" id="fname" style="width: 98%;"></td>
+                        <td><span id="msg1">POOR</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><label for="last_name">Last Name</label></td>
+                        <td><input type="text" name="last_name" onkeyup="strengthChecker2()" id="lname" style="width: 98%;"></td>
+                        <td><span id="msg2">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="E_mail">Email</label></td>
+                        <td><input type="email" name="E_mail" onkeyup="strengthChecker3()" id="mail" style="width: 98%;"></td>
+                        <td><span id="msg3">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="pass_key">Password</label></td>
+                        <td><input type="password" name="pass_key" onkeyup="strengthChecker4()" id="pass" style="width: 98%;"></td>
+                        <td><span id="msg4">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="re_pass_key">Re-enter Password</label></td>
+                        <td><input type="password" name="re_pass_key" onkeyup="strengthChecker5()" id="re_pass" style="width: 98%;"></td>
+                        <td><span id="msg5">POOR OR MISSMATCH</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td><input type="radio" name="gender" id="male">Male
+                            <br> <br>
+                        <input type="radio" name="gender" id="female">Female</td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="AGE">AGE</label></td>
+                        <td><input type="number" name="AGE" onkeyup="strengthChecker6()" id="age" style="width: 98%;"></td>
+                        <td><span id="msg6">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="p_num">Phone number</label></td>
+                        <td><input type="number" name="p_num" onkeyup="strengthChecker7()" id="P_NUM" style="width: 98%;"></td>
+                        <td><span id="msg7">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="address">Address</label></td>
+                        <td><textarea name="address" id="Address" cols="50" rows="7" onkeyup="strengthChecker8()"></textarea></td>
+                        <td><span id="msg8">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="state">State</label></td>
+                        <td><input type="text" name="state" onkeyup="strengthChecker9()" id="STATE" style="width: 98%;"></td>
+                        <td><span id="msg9">POOR</span></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="country">Country</label></td>
+                        <td><select name="country" id="Country">
+                            <option value="options to choose">Choose your country</option>
+                            <option value="India">INDIA</option>
+                            <option value="USA">USA</option>
+                            <option value="Russia">RUSSIA</option>
+                            <option value="Belgium">BELGIUM</option>
+                        </select></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="language">Languages known</label></td>
+                        <td><input type="checkbox" name="language">English
+                        <input type="checkbox" name="language">Kannada
+                        <input type="checkbox" name="language">Hindi
+                        <input type="checkbox" name="language">Telugu
+                    </td>
+                    </tr>
+                    
+                   
+
+                
+                </table>
+            </center>
+                <input type="checkbox" name="decleration" class="check">
+                <label for="decleration">Hereby I declare all the given details are true</label>
+            
+        
+            <p class="alignment">Log in to <a href="www.ethnus.com">Ethnus</a> website</p> 
+            <center>
+                <button class="btn">REGISTER</button>
+            </center>       
+            </form>
+        
+    </div>
+    
+    
+    
+
+
+    <script>
+
+function strengthChecker1(){
+    var f_name = document.getElementById("fname").value;
+    if(f_name.length==0){
+        document.getElementById("msg1").innerHTML = "POOR";
+    }
+    else if(f_name.length<5){
+        document.getElementById("msg1").innerHTML = "MEDIUM"
+    }
+    else{
+        document.getElementById("msg1").innerHTML = "LARGE"
+    }
+}
+
+
+function strengthChecker2(){
+    var l_name = document.getElementById("lname").value;
+    if(l_name.length==0){
+        document.getElementById("msg2").innerHTML = "POOR";
+    }
+    else if(l_name.length<5){
+        document.getElementById("msg2").innerHTML = "MEDIUM"
+    }
+    else{
+        document.getElementById("msg2").innerHTML = "LARGE"
+    }
+}
+
+function strengthChecker3(){
+    var e_mail = document.getElementById("mail").value;
+    if(e_mail.length==0){
+        document.getElementById("msg3").innerHTML = "POOR";
+    }
+    else if(e_mail.length<5){
+        document.getElementById("msg3").innerHTML = "MEDIUM"
+    }
+    else{
+        document.getElementById("msg3").innerHTML = "LARGE"
+    }
+}
+
+function strengthChecker4(){
+    var key = document.getElementById("pass").value;
+    if(key.length==0){
+        document.getElementById("msg4").innerHTML = "POOR";
+    }
+    else if(key.length<5){
+        document.getElementById("msg4").innerHTML = "MEDIUM"
+    }
+    else{
+        document.getElementById("msg4").innerHTML = "STRONG"
+    }
+}
+
+function strengthChecker5(){
+    var re_key = document.getElementById("re_pass").value;
+    if(re_key.length==0){
+        document.getElementById("msg5").innerHTML = "POOR OR MISSMATCH";
+    }
+    else if(re_key.length<5){
+        document.getElementById("msg5").innerHTML = "Medium"
+    }
+    else{
+        document.getElementById("msg5").innerHTML = "Strong"
+    }
+}
+
+function strengthChecker6(){
+    var Age = document.getElementById("age").value;
+    if(Age==0){
+        document.getElementById("msg6").innerHTML = "POOR";
+    }
+    else if(Age<18){
+        document.getElementById("msg6").innerHTML = "MINOR"
+    }
+    else{
+        document.getElementById("msg6").innerHTML = "ADULT"
+    }
+}
+
+function strengthChecker7(){
+    var Phone = document.getElementById("P_NUM").value;
+    if(Phone.length==0){
+        document.getElementById("msg7").innerHTML = "POOR";
+    }
+    else if(Phone.length<10){
+        document.getElementById("msg7").innerHTML = "INCORRECT"
+    }
+    else if(Phone.length==10){
+        document.getElementById("msg7").innerHTML = "CORRECT"
+    }
+    else{
+        document.getElementById("msg7").innerHTML = "GREATER THAN 10 NUMBER"
+    }
+}
+
+
+function strengthChecker8(){
+    var ADDRESS= document.getElementById("Address").value;
+    if(ADDRESS.length==0){
+        document.getElementById("msg8").innerHTML = "POOR";
+    }
+    else if(ADDRESS.length<10){
+        document.getElementById("msg8").innerHTML = "ENTER WHOLE ADDRESS"
+    }
+    else{
+        document.getElementById("msg8").innerHTML = "GOOD"
+    }
+}
+
+function strengthChecker9(){
+    var State = document.getElementById("STATE").value;
+    if(State.length==0){
+        document.getElementById("msg9").innerHTML = "POOR";
+    }
+    else if(State.length<2){
+        document.getElementById("msg9").innerHTML = "DON'T GIVE INITIALS"
+    }
+    else{
+        document.getElementById("msg9").innerHTML = "GOOD"
+    }
+}
+
+    </script>
+</body>
+</html>
+
+

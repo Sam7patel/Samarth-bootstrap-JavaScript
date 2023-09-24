@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .adjust{ 
+            width: 30%;
+        }
+
+    .icon-border {
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    .icon-border {
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    
+    .p-0 {
+        padding: 0 !important;
+    }
+    .butonwidth{
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+<center>
+    
+    <form action="https://www.ethnus.com" onsubmit="return validate()" class="form bg-light adjust mt-5 shadow p-3 mb-5 bg-white rounded">
+        <!-- If return true then it redirects to ethnus page -->
+        <table>
+            <tr>
+                <td><h3 class="text-center mt-3" style="font-style:italic; font-family: cursive;">Instagram</h3></td>
+            </tr>
+            <tr>
+                <td id="invalid-msg"></td>
+            </tr>
+            <tr>
+                <td class="row align-items-center">
+                    <div class="col-auto p-0">
+                        <div class="icon-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <input type="text" class="form-control" id="i1" placeholder="Username">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="row align-items-center">
+                    <div class="col-auto p-0">
+                        <div class="icon-border">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                                class="bi bi-lock-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col p-0">
+                        <input type="password" class="form-control my-2" id="i2" placeholder="Enter password">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center"><button type="submit" class="btn btn-primary butonwidth mt-3 mb-3">Log in</button>
+                    
+                </td>
+                
+            </tr>
+
+            <tr>
+                <td class="row">
+                    <div class="col-auto">
+                        <input type="checkbox" class="rem" name="rem">
+                        <label for="rem">Remember me</label>
+                    </div>
+                    <div class="col ms-4">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div class="container mt-5">
+        <p>Don't have an account! <a href="#">Sign up here.</a></p>
+    </div>
+    
+    
+
+</center> 
+
+<script>
+    function validate(){
+        var un =document.getElementById("i1").value;
+        var pw =document.getElementById("i2").value;
+        if(un.length<1 || pwd.length<1){ //username or password < length of 5, it is said to be invalid
+            document.getElementById("invalid-msg").innerHTML='<p class="alert alert-danger">Invalid username or password</p>';
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

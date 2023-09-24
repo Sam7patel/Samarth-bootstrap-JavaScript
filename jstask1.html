@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="container bg-dark">
+    
+    <div class=" text-center text-light">
+        <h1 class="mt-3 mb-3">Reverse a Number</h1>
+        <p>Enter a number to reverse:</p>
+        <input type="number" id="inputNumber">
+        <button onclick="reverseNumber()">Reverse</button>
+        <p>Reversed Number:</p>
+        <p id="result"></p>
+    </div>
+    
+
+    <script>
+        function reverseNumber() {
+            // Get the input element
+            const inputElement = document.getElementById("inputNumber");
+
+            // Get the value from the input element
+            const inputValue = inputElement.value;
+
+            // Reverse the number
+            const reversedValue = reverseNumericString(inputValue.toString());
+
+            // Display the reversed number in the result paragraph
+            document.getElementById("result").textContent = reversedValue;
+        }
+
+        function reverseNumericString(str) {
+            // Convert the string to an array, reverse it, and join it back
+            return str.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {
+            background: url(locomotive.jpg);
+            width: 50vw; /* 50% of the viewport width */
+            height: 50vh; /* 50% of the viewport height */
+            background-size: cover; /* Make sure the image covers the entire div */
+            
+        }
+
+        .running {
+            animation: locomotive-animation 10s linear infinite;
+        }
+
+        @keyframes locomotive-animation {
+            from {
+                background-position: 0px;
+            }
+            to {
+                background-position: 80px;
+            }
+        }
+        .heading{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="image"></div>
+        <br>
+        <h2 class="heading">Click the following button to handle animation</h2>
+        <button id="startbtn">Start</button>
+        <button id="stopbtn">Stop</button>
+    </center>
+
+    <script>
+        const image = document.getElementById('image');
+        const startButton = document.getElementById('startbtn');
+        const stopButton = document.getElementById('stopbtn');
+
+        startButton.addEventListener('click', () => {
+            image.classList.add('running');
+        });
+
+        stopButton.addEventListener('click', () => {
+            image.classList.remove('running');
+            
+        });
+    </script>
+</body>
+</html>
+
+
+
